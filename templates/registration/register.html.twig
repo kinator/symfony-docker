@@ -1,0 +1,46 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% include 'header.html.twig' %}
+    {% include "side_navigation.html.twig" %}
+
+    <div class="container-fluid px-4">
+        <h1 class="h3 mb-3 font-weight-normal mt-4">Register</h1>
+
+        <div class="card p-4">
+
+            {{ form_errors(registrationForm) }}
+
+            {{ form_start(registrationForm) }}
+            <div class="mx-3">
+
+                <div class="my-2 text-center">
+                    {{ form_row(registrationForm.email,{
+                        label: 'Email : ',
+                        attr: { class: 'full-width' }
+
+                    }) }}
+                </div>
+
+                <div class="my-3 text-center">
+                    {{ form_row(registrationForm.plainPassword, {
+                        label: 'Password : ',
+                        attr: { class: 'full-width' }
+                    }) }}
+                </div>
+
+                <div class="my-1 mx-2">
+                    {{ form_row(registrationForm.agreeTerms) }}
+                </div>
+
+                <button class="btn btn-lg btn-primary mt-4" type="submit" class="btn">Register</button>
+            </div>
+            {{ form_end(registrationForm) }}
+        </div>
+    </div>
+
+    {% include 'footer.html.twig' %}
+
+{% endblock %}
