@@ -46,7 +46,7 @@ class ArticleType extends AbstractType
                 'attr' => ['class' => 'form-control'],
                 'label_attr' => ['class' => 'form-label mt-2'],
                 'mapped' => false,
-                'required' => true,
+                'required' => false,
                 'constraints' => [
                     New File([
                         'maxSize' => '10024K',

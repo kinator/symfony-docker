@@ -53,7 +53,7 @@ class ArticleController extends AbstractController
                 } catch (FileException $e) {
                     print($e->getMessage() . "\n line : ".$e->getLine() . "\n file : ".$e->getFile());
                 }
-
+                var_dump($newFilename);
                 $article->setImage($newFilename);
             }
 
